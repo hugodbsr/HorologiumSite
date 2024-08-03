@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap');
+
+:root {
+    --main-color: #aa682c;
+    --text-color: white;
+    --divider-color: white;
+    --hover-bg-color: #f4a364;
+    --background-color: #0e0d0d;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../ressources/background/horologiumBG3.png");
+    background-size: cover;
+}
+
+.logo{
+    background: var(--background-color);
+    width: 25%;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.presentation {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentation img {
+    width: 35%;
+    height: auto;
+    margin: 2vw;
+}
+
+.divider {
+    width: 70%;
+    border: 0;
+    border-top: 3px solid var(--divider-color);
+    margin-top: 4rem;
+}
+
+.who-are-we,
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.who-are-we h1,
+.project h1 {
+    font-size: 2.5rem;
+    font-family: var(--font-family);
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    margin: 0 2rem;
+    width: 65%;
+    padding: 2vw;
+    border: solid var(--main-color) 0.4vw;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.description p {
+    margin-bottom: 16px;
+}
+
+.smt4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../ressources/background/SMTIVBG_opacity.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.smt4>img {
+    width: 45%;
+    padding: 1.5rem 0;
+}
+
+.Title-SMTIV{
+    font-size: 2rem;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.percentage-done-SMTIV {
+    width: 50%;
+    font-size: 1.5rem;
+    background: var(--background-color);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.bar-percentage-SMTIV{
+    background-color: var(--main-color);
+}
+
+.SMTIV-Text{
+    width: 55%;
+    padding: 2vw;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.SMTIV-Text a{
+    text-decoration: none;
+    color: var(--hover-bg-color);
+}
+
+.carousel {
+    position: relative;
+    width: 40%;
+    overflow: hidden;
+    box-shadow: var(--main-color) 0.3vw 0.4vw;
+    border-radius: 10px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    transition: .1s linear;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+.carousel-indicators {
+    text-align: center;
+    padding: 2vw;
+}
+
+.carousel-indicator {
+    display: inline-block;
+    width: 0.7vw;
+    height: 0.7vw;
+    margin: 0 5px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-indicator.active {
+    background-color: var(--hover-bg-color);
+    transform: scale(1.4);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    align-content: center;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    padding-top: 0;
+    font-size: 1.5rem;
+}
+
+footer h2 {
+    margin-bottom: 1rem;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.social-media img {
+    width: 2rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-align: center;
+    line-height: 4.5rem;
+    font-size: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+#back-to-top:hover {
+    background-color: var(--hover-bg-color);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 60%;
+    }
+
+    .presentation img {
+        width: 80%;
+    }
+
+    .description {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .smt4>img {
+        width: 80%;
+    }
+
+    .Title-SMTIV {
+        font-size: 1.4rem;
+    }
+
+    .percentage-done-SMTIV {
+        width: 90%;
+    }
+
+    .SMTIV-Text {
+        width: 90%;
+        font-size: 1.1rem;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+
+    .carousel-indicator{
+        width: 1.2vw;
+        height: 1.2vw;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .carousel-indicator{
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .carousel-button{
+        visibility: hidden;
+    }
+
+    .who-are-we h1, .project h1{
+        font-size: 1.7rem;
+    }
+
+    .logo {
+        width: 80%;
+    }
+
+    .presentation img {
+        width: 90%;
+    }
+
+    .description {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .smt4>img {
+        width: 90%;
+    }
+
+    .Title-SMTIV {
+        font-size: 1.2rem;
+    }
+
+    .percentage-done-SMTIV {
+        width: 90%;
+    }
+
+    .SMTIV-Text {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}
